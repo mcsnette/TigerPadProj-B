@@ -1,0 +1,33 @@
+﻿﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <!-- Favicons -->
+    <link href="~/images/icon.png" rel="icon" />
+</head>
+<body>
+    <!--START OF NAVIGATION BAR-->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a asp-controller="Account" asp-action="SignUp"><img src="~/images/logo-withtext.png" /></a></li>
+                <li><a asp-controller="Account" asp-action="About">About</a></li>
+            </ul>
+        </nav>
+        <!--END OF NAVIGATION BAR-->
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
