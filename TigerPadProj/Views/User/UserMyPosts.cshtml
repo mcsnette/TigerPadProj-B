@@ -8,13 +8,13 @@
 <div class="user-inquiries-container">
     <!--==================LEFT SIDE=======================-->
     <div class="user-inq-left-container">
-        <div class="inq-left-profile">
+        <div class="left-profile">
             <div class="inq-user-profile-photo">
                 <img src="~/images/profile-3.jpg" />
             </div>
             <div class="inq-user-profile-name">
-                <p>Caroline Herschel</p>
                 <p>&#64itsCaroline</p>
+                <p>click to edit</p>
             </div>
         </div>
 
@@ -26,15 +26,15 @@
                 <h3>Home</h3>
             </a>
             <a asp-controller="User" asp-action="UserMyPosts" class="sidebar-item active">
-                <span><i class="uil uil-comment-question"></i></span>
+                <span><i class="uil uil-folder-heart"></i></span>
                 <h3>My Posts</h3>
             </a>
             <a asp-controller="User" asp-action="UserFollowing" class="sidebar-item">
-                <span><i class="uil uil-notebooks"></i></span>
+                <span><i class="uil uil-users-alt"></i></span>
                 <h3>Following</h3>
             </a>
         </div>
-        <div class="inq-left-button"><button>CREATE POST</button></div>
+        <div><button class="left-button">CREATE POST</button></div>
     </div>
 
     <!--==================MIDDLE SIDE=======================-->
@@ -51,7 +51,6 @@
                     <img src="~/images/profile-3.jpg" />
                 </div>
                 <div class="inq-user-info">
-                    <p class="inq-name">Caroline Herschel</p>
                     <p class="inq-username">&#64itsCaroline</p>
                 </div>
             </div>
@@ -66,7 +65,6 @@
             </div>
             <div class="inq-user-bookmark">
                 <span><i class="uil uil-heart"></i></span>
-                <span><i class="uil uil-comments"></i></span>
             </div>
         </div>
 
@@ -78,7 +76,6 @@
                     <img src="~/images/profile-3.jpg" />
                 </div>
                 <div class="inq-user-info">
-                    <p class="inq-name">Caroline Herschel</p>
                     <p class="inq-username">&#64itsCaroline</p>
                 </div>
             </div>
@@ -93,7 +90,6 @@
             </div>
             <div class="inq-user-bookmark">
                 <span><i class="uil uil-heart"></i></span>
-                <span><i class="uil uil-comments"></i></span>
             </div>
         </div>
 
@@ -130,3 +126,108 @@
     <!--END OF RIGHT SIDE-->
 </div>
 <!-- END OF MAIN CONTAINER-->
+
+                              <!-- Edit Profile Modal Structure -->
+<div id="profileModal" class="modal">
+    <div class="modal-content">
+        <div class="edit-profile-container1">
+            <div class="profilephoto-text">
+                <p>Profile Picture</p>
+            </div>
+            <div class="edit-img"><img src="~/images/user-profile.png" /></div>
+            <div class="uploadimg-text">
+                <button>UPLOAD PHOTO</button>
+            </div>
+        </div>
+        
+        <div class="edit-profile-container2">
+            <div class="name-label">
+                <p>USERNAME</p>
+            </div>
+            <div class="edit-profile-form">
+                <input class="edit-profile-field"
+                       type="text"
+                       placeholder="Change your username"
+                       name="username"
+                       required />
+            </div>
+            <div class="name-label">
+                <p>PASSWORD</p>
+            </div>
+            <div class="edit-profile-form">
+                <input class="edit-profile-field"
+                       type="text"
+                       placeholder="Change your password"
+                       name="password"
+                       required />
+            </div>
+            <div class="edit-profile-btn-container">
+                <button class="save-changes-btn">SAVE CHANGES</button>
+                <button class="cancel-btn">CANCEL</button>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+<!-- Edit Profile Modal Structure -->
+<div id="profileModal" class="modal">
+    <div class="modal-content">
+        <div class="edit-profile-container1">
+            <div class="profilephoto-text">
+                <p>Profile Picture</p>
+            </div>
+            <div class="edit-img"><img src="~/images/user-profile.png" /></div>
+            <div class="uploadimg-text">
+                <button>UPLOAD PHOTO</button>
+            </div>
+        </div>
+
+        <div class="edit-profile-container2">
+            <div class="name-label">
+                <p>USERNAME</p>
+            </div>
+            <div class="edit-profile-form">
+                <input class="edit-profile-field"
+                       type="text"
+                       placeholder="Change your username"
+                       name="username"
+                       required />
+            </div>
+            <div class="name-label">
+                <p>PASSWORD</p>
+            </div>
+            <div class="edit-profile-form">
+                <input class="edit-profile-field"
+                       type="text"
+                       placeholder="Change your password"
+                       name="password"
+                       required />
+            </div>
+            <div class="edit-profile-btn-container">
+                <button class="save-changes-btn">SAVE CHANGES</button>
+                <button class="cancel-btn">CANCEL</button>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<!-- Create Post Modal Structure -->
+<div id="createModal" class="modal">
+    <div class="create-modal-content">
+        <span class="close" id="closeModalButton"><i class="uil uil-times-circle"></i></span>
+        <div class="create-container">
+            <input class="create-post-field"
+                   type="text"
+                   placeholder="Let out a roar!"
+                   name="post" />
+        </div>
+        <button class="post-btn">POST</button>
+    </div>
+</div>
+<!-- Add this line to include your external JavaScript file -->
+<script src="~/js/script.js"></script>
