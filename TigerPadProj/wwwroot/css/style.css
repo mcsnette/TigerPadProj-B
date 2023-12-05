@@ -1052,6 +1052,9 @@
   font-size: 24px;
   cursor: pointer;
 }
+.user-bookmark span i:hover {
+  color: var(--color-primary);
+}
 
 /*--============= RIGHT ===============--*/
 
@@ -1331,6 +1334,11 @@
 }
 .inq-user-bookmark span i {
   font-size: 24px;
+  cursor: pointer;
+}
+
+.inq-user-bookmark span i:hover{
+    color: var(--color-primary);
 }
 
 /*--============= RIGHT ===============--*/
